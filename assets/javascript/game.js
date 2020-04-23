@@ -1,7 +1,6 @@
 //Global Variables
 //--------------------------------------------------------------------
-//Arrays and Variables for holding data
-
+//Variables for holding data
 
 //Game counters
 let winCount = 0;
@@ -39,6 +38,8 @@ function startGame() {
 
 startGame() 
 
+ 
+
 //console.log
 
 for (var i = 0; i < winCount; i++) {
@@ -62,8 +63,24 @@ function addValues(clickedCrystal) {
     playerNumber += clickedCrystal.value
     $('#playerNumber').text(playerNumber) 
     //check if number = the guess number if it does they win, if they go over they lose if/else if/else
-}
+    if (playerNumber === compGeneratedNumber) 
+    {
+        alert('win');
+        winCount++;
+        $('#wins').text(winCount);
+        $('#loss').html(0);
+        reset();
+    } 
+    else if (compGeneratedNumber < playerNumber)
+    {
+        alert('loser');
+        lossCount++;
+        $('#loss').html(lossCount);
+        $('wins').html(0);
+        reset();
 
+    }
+}
 
 //Main Process
 //--------------------------------------------------------------------
@@ -88,4 +105,9 @@ $('#greenGem').click(function(){
 })
 
 //add wins and losses and add it to variables
-//start game
+//var scoreboard = {X: 0, O:0};
+//function updateScoreBoard (winner) {
+  //  if (++scoreboard[winner]==3) {
+  //      setMessage("Game over! " + winner + " has won three matches");
+  //  }
+//}
