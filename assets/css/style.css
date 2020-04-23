@@ -1,5 +1,6 @@
 .row {
     padding: 10px;
+    margin-left: 10px;
     
 }
 
@@ -14,4 +15,23 @@
 
 .card-body {
     background-color: #c97135;
+}
+
+body {
+    background-image: url("../images/bananas.png");
+}
+
+.imaPosition {
+    margin-left: 10px;
+}
+
+.card  {
+    background-color: #53c987;
+}
+
+.cards {
+    background-color: #1ca394;
+}
+.BG {
+    background-color: #3afdfb;
 }

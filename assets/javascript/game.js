@@ -29,11 +29,15 @@ let crystal = {
 
 }
 
+function startGame() {
 //set values for each crystal
-crystal.pink.value = getRandom(1,12)
-crystal.blue.value = getRandom (1,12)
-crystal.purple.value = getRandom (1,12)
-crystal.green.value = getRandom (1,12)
+    crystal.pink.value = getRandom(1,12);
+    crystal.blue.value = getRandom (1,12);
+    crystal.purple.value = getRandom (1,12);
+    crystal.green.value = getRandom (1,12);
+}
+
+startGame() 
 
 //console.log
 
@@ -42,7 +46,7 @@ for (var i = 0; i < winCount; i++) {
  }
 
 
-  // Listener
+// Listener
   document.onkeydown = function (event) {
     console.log(event.key)
   }
