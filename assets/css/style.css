@@ -5,5 +5,13 @@
 
 .container {
     position: relative;
+    background-color: #fbe5cf
 }
     
+#bgColor {
+    background-color: #fbe5cf
+}
+
+.card-body {
+    background-color: #c97135;
+}
