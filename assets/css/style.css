@@ -43,6 +43,7 @@ body {
     margin: -40px;
 }
 
-#playerNmuber {
-    margin: -40px;
+#playerNumber {
+    margin: -10px;
+    font-size: 50px;
 }
