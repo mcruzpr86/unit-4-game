@@ -7,6 +7,7 @@ let winCount = 0;
 let lossCount = 0;
 let guessesLeft = 0;
 let playerNumber = 0;
+let finalScore = 0;
 let compGeneratedNumber = getRandom (19, 120);
 let crystal = {
     pink: {
@@ -53,8 +54,26 @@ for (var i = 0; i < winCount; i++) {
   }
 
 
-//Functions (Reusable blocks of code)
+//Functions to ramdomize the numbers when crystals clicked 
 //--------------------------------------------------------------------
+function reset()
+{
+    //reset
+    compGeneratedNumber = Math.floor(Math.random() * (120 - 19) + 19);
+    console.log ('compGeneratedNumber = ' + compGeneratedNumber);
+    crystal.pink.value = getRandom(1,12);
+    crystal.blue.value = getRandom (1,12);
+    crystal.purple.value = getRandom (1,12);
+    crystal.green.value = getRandom (1,12);
+    finalScore = 0;
+
+    //HTML
+    $('#compNumber').html(compGeneratedNumber)
+    $('#totalScore').html(finalScore)
+}
+
+
+
 function getRandom(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
