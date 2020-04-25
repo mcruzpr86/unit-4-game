@@ -57,10 +57,10 @@ for (var i = 0; i < winCount; i++) {
 //Functions to randomize the numbers when crystals clicked 
 //--------------------------------------------------------------------
 
-function resetButton() {
-    location.reload();
+//function resetButton() {
+//    location.reload();
 
-}
+//}
 
 
 
@@ -104,10 +104,16 @@ function addValues(clickedCrystal) {
         lossCount++;
         $('#loss').html(lossCount);
         $('wins').html(0);
-        reset();
+        reset(playerNumber);
 
     }
 }
+
+//reset2
+//document.getElementById("playerNumber").reset();
+
+
+reset()
 
 //Main Process
 //--------------------------------------------------------------------
