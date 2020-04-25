@@ -54,7 +54,7 @@ for (var i = 0; i < winCount; i++) {
   }
 
 
-//Functions to ramdomize the numbers when crystals clicked 
+//Functions to randomize the numbers when crystals clicked 
 //--------------------------------------------------------------------
 function reset()
 {
@@ -86,7 +86,7 @@ function addValues(clickedCrystal) {
     {
         alert('win');
         winCount++;
-        $('#wins').text(winCount);
+        $('#wins').html(winCount);
         $('#loss').html(0);
         reset();
     } 
