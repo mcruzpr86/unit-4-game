@@ -71,7 +71,7 @@ function reset()
        crystal.green.value = getRandom (1,12);
     
        playerNumber = 0;
-  $('playerNumber').html(0)
+    $('#playerNumber').html(playerNumber)
 
     //HTML
     $('#compNumber').html(compGeneratedNumber)
