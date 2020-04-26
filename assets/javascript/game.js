@@ -7,7 +7,6 @@ let winCount = 0;
 let lossCount = 0;
 let guessesLeft = 0;
 let playerNumber = 0;
-let finalScore = 0;
 let compGeneratedNumber = getRandom (19, 120);
 let crystal = {
     pink: {
@@ -61,23 +60,22 @@ for (var i = 0; i < winCount; i++) {
 //    location.reload();
 
 //}
-
-
-
 function reset()
 {
     //reset
-    compGeneratedNumber = Math.floor(Math.random() * (120 - 19) + 19);
-    console.log ('compGeneratedNumber = ' + compGeneratedNumber);
-    crystal.pink.value = getRandom(1,12);
-    crystal.blue.value = getRandom (1,12);
-    crystal.purple.value = getRandom (1,12);
-    crystal.green.value = getRandom (1,12);
-    finalScore = 0;
+   compGeneratedNumber = Math.floor(Math.random() * (120 - 19) + 19);
+      console.log ('compGeneratedNumber = ' + compGeneratedNumber);
+       crystal.pink.value = getRandom(1,12);
+       crystal.blue.value = getRandom (1,12);
+       crystal.purple.value = getRandom (1,12);
+       crystal.green.value = getRandom (1,12);
+    
+       playerNumber = 0;
+  $('playerNumber').html(0)
 
     //HTML
     $('#compNumber').html(compGeneratedNumber)
-    $('#totalScore').html(finalScore)
+    
 }
 
 
@@ -94,23 +92,21 @@ function addValues(clickedCrystal) {
     {
         alert('win');
         winCount++;
-        $('#wins').html(winCount);
-        $('#loss').html(0);
+        $('#wins').html('Wins: ' + winCount);
+        
         reset();
     } 
     else if (compGeneratedNumber < playerNumber)
     {
         alert('loser');
         lossCount++;
-        $('#loss').html(lossCount);
-        $('wins').html(0);
-        reset(playerNumber);
+        $('#loss').html('Losses: ' + lossCount);
+        
+        reset();
 
     }
 }
 
-//reset2
-//document.getElementById("playerNumber").reset();
 
 
 reset()
@@ -137,10 +133,3 @@ $('#greenGem').click(function(){
     addValues(crystal.green)
 })
 
-//add wins and losses and add it to variables
-//var scoreboard = {X: 0, O:0};
-//function updateScoreBoard (winner) {
-  //  if (++scoreboard[winner]==3) {
-  //      setMessage("Game over! " + winner + " has won three matches");
-  //  }
-//}
